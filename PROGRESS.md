@@ -259,3 +259,16 @@ Noto Naskh Arabic **غير متاح** في مكتبة خطوط Figma، وقد ت
   ```
   ثم `scripts/cli-check.sh` و`scripts/shoot-matrix.sh ar` (و`en` بعد تغيير اللغة في النسخة المعزولة كما في المرحلة 7).
 - **أي تعديل على لون أو مقاس:** في Figma أولًا، ثم أعد تشغيل `export-variables.js`، واحفظ ناتجه في `tokens/figma.json`، ثم `scripts/build.py`. لا تحرير يدوي لـ `src/tokens.css`.
+
+## حالة النشر (2026-11-05)
+- **المستودع:** https://github.com/iSltanX/ghasaq، أُنشئ خاصًّا ثم حُوّل إلى عام بتوجيه سلطان. وأُضيفت موضوعاته: obsidian-theme وobsidian-md وobsidian وarabic وrtl وtheme.
+- **الوسم `1.0.0`:** مدفوع، وسير العمل أنشأ إصدارًا **مسودّة** مرفقًا به `manifest.json` و`theme.css`.
+- **نشر الإصدار:** رفضته طبقة الأمان التلقائية (Create Public Surface)، فينشره سلطان من صفحة الإصدار أو بالأمر:
+  ```
+  gh release edit 1.0.0 --repo iSltanX/ghasaq --draft=false --latest
+  ```
+- **نموذج التقديم في community.obsidian.md:** حقوله: رابط المستودع، والمالك، ومسار اللقطة (`cover.png`)، والوضعان Dark وLight، وإقراران بالسياسات والدعم. لا وصف فيه.
+- **الوصفان ولقطات الإدراج:** يُضافان بعد التقديم من «Edit listing». النصّان في `release-notes/listing.md`، واللقطات الخمس في `screenshots/listing/` بمقاس 1200×800.
+- **تحذيرات متوقعة في المراجعة الآلية:** ظهرت مع «خزف» ولا تمنع النشر:
+  - حجم `theme.css` (غسق 207KB).
+  - قلة النص الإنجليزي في README، وقد أضفنا سطرًا إنجليزيًا في رأسه.
