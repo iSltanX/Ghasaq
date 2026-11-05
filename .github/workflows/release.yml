@@ -1,0 +1,25 @@
+# ينشئ إصدارًا مسودّة عند دفع وسم يطابق version في manifest.json، ويرفق manifest.json وtheme.css.
+# لا يعمل إلا بعد أن يدفع صاحب المستودع الوسم بنفسه: git tag -a 1.0.0 -m 1.0.0 && git push origin 1.0.0
+name: Release
+on:
+  push:
+    tags:
+      - "*"
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tag must match manifest version
+        run: |
+          v=$(python3 -c "import json;print(json.load(open('manifest.json'))['version'])")
+          if [ "$v" != "$GITHUB_REF_NAME" ]; then echo "tag $GITHUB_REF_NAME != manifest $v"; exit 1; fi
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          notes="release-notes/$GITHUB_REF_NAME.md"
+          [ -f "$notes" ] || notes=/dev/null
+          gh release create "$GITHUB_REF_NAME" --draft --title "$GITHUB_REF_NAME" --notes-file "$notes" manifest.json theme.css

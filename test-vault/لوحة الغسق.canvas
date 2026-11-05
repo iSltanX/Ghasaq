@@ -1,0 +1,18 @@
+{
+	"nodes":[
+		{"id":"g1","type":"group","x":-40,"y":-60,"width":900,"height":420,"label":"ألوان اللوحة الستة"},
+		{"id":"c1","type":"text","text":"## الغروب\nأحمر وردي: اللون ١","x":0,"y":0,"width":250,"height":120,"color":"1"},
+		{"id":"c2","type":"text","text":"## الشفق\nنحاسي: اللون ٢","x":290,"y":0,"width":250,"height":120,"color":"2"},
+		{"id":"c3","type":"text","text":"## الذهب\nذهبي: اللون ٣","x":580,"y":0,"width":250,"height":120,"color":"3"},
+		{"id":"c4","type":"text","text":"## العشب\nأخضر: اللون ٤","x":0,"y":200,"width":250,"height":120,"color":"4"},
+		{"id":"c5","type":"text","text":"## الماء\nفيروزي: اللون ٥","x":290,"y":200,"width":250,"height":120,"color":"5"},
+		{"id":"c6","type":"text","text":"## الليل\nبنفسجي: اللون ٦","x":580,"y":200,"width":250,"height":120,"color":"6"},
+		{"id":"n1","type":"text","text":"بطاقة بلا لون، فيها **عريض** و==تظليل== و[[دفتر الغسق]].\n\nAnd an English line.","x":960,"y":0,"width":300,"height":160},
+		{"id":"f1","type":"file","file":"يوميات/نثر مشكول.md","x":960,"y":220,"width":420,"height":320}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"c1","fromSide":"right","toNode":"c2","toSide":"left","label":"ثم"},
+		{"id":"e2","fromNode":"c2","fromSide":"right","toNode":"c3","toSide":"left"},
+		{"id":"e3","fromNode":"c3","fromSide":"right","toNode":"n1","toSide":"left","label":"إلى الملاحظة","color":"6"}
+	]
+}

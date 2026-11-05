@@ -1,0 +1,180 @@
+/* خيارات Style Settings. الثيم يعمل كاملًا بدون الإضافة؛ هذه الكتلة تظهر إن وُجدت. */
+
+/* @settings
+name: "غَسَق · Ghasaq"
+id: ghasaq
+settings:
+  -
+    id: ghasaq-type-heading
+    title: "الطباعة"
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: ghasaq-text-font
+    title: "خط المتن"
+    description: "اتركه فارغًا للخط المضمَّن (Noto Naskh Arabic)، أو اكتب اسم خطٍّ مثبّت على جهازك مثل Amiri."
+    type: variable-text
+    default: ''
+    quotes: true
+  -
+    id: line-height-normal
+    title: "ارتفاع السطر"
+    description: "من 1.6 إلى 2.2. القيمة الافتراضية 1.9 تترك للتشكيل مسافة كافية بين الأسطر."
+    type: variable-number-slider
+    default: 1.9
+    min: 1.6
+    max: 2.2
+    step: 0.05
+  -
+    id: file-line-width
+    title: "عرض سطر القراءة"
+    description: "عرض عمود النص حين يكون «السطر المقروء» مفعّلًا في إعدادات المحرر."
+    type: variable-number-slider
+    default: 720
+    min: 560
+    max: 960
+    step: 20
+    format: px
+  -
+    id: ghasaq-align
+    title: "محاذاة المتن"
+    description: "الضبط يوسّع الفراغات بين الكلمات لأن Chromium لا يدعم الكشيدة."
+    type: class-select
+    allowEmpty: false
+    default: ghasaq-align-start
+    options:
+      -
+        label: "بداية السطر"
+        value: ghasaq-align-start
+      -
+        label: "ضبط"
+        value: ghasaq-align-justify
+  -
+    id: ghasaq-color-heading
+    title: "الألوان"
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: ghasaq-accent
+    title: "لون التمييز"
+    description: "إن اخترت لونًا من إعدادات Obsidian (المظهر ← لون التمييز) فاختيارك هناك يتقدّم على هذا."
+    type: class-select
+    allowEmpty: false
+    default: ghasaq-accent-amber
+    options:
+      -
+        label: "كهرماني (افتراضي)"
+        value: ghasaq-accent-amber
+      -
+        label: "نحاسي"
+        value: ghasaq-accent-copper
+      -
+        label: "بنفسجي غسقي"
+        value: ghasaq-accent-dusk
+  -
+    id: ghasaq-headings
+    title: "لون العناوين"
+    type: class-select
+    allowEmpty: false
+    default: ghasaq-headings-text
+    options:
+      -
+        label: "بلون النص"
+        value: ghasaq-headings-text
+      -
+        label: "بلون التمييز"
+        value: ghasaq-headings-accent
+  -
+    id: ghasaq-high-contrast
+    title: "تباين أعلى"
+    description: "يرفع تباين النص الثانوي والخافت والحدود في الوضعين."
+    type: class-toggle
+    default: false
+  -
+    id: ghasaq-ornament-heading
+    title: "الزخرفة والقصيدة"
+    type: heading
+    level: 1
+    collapsed: false
+  -
+    id: ghasaq-ornament-hr
+    title: "فاصل --- مزخرف"
+    description: "معيّنٌ صغير بلون آخر الضوء بين خطين، يذكّر بالأفق."
+    type: class-toggle
+    default: false
+  -
+    id: ghasaq-qasida-justify
+    title: "ضبط الشطر في القصيدة"
+    description: "يمدّ كل شطر على عرض عموده بدل توسيطه، في الملاحظات ذات cssclasses: qasida."
+    type: class-toggle
+    default: false
+*/
+
+/* محاذاة المتن: ضبط (الافتراضي بداية السطر من النواة) */
+.ghasaq-align-justify .markdown-rendered p,
+.ghasaq-align-justify .markdown-rendered li,
+.ghasaq-align-justify .markdown-source-view.mod-cm6 .cm-content > .cm-line:not([class*="HyperMD-"]) {
+  text-align: justify;
+}
+
+/* العناوين بلون التمييز */
+.ghasaq-headings-accent.theme-dark,
+.ghasaq-headings-accent.theme-light {
+  --h1-color: var(--text-accent);
+  --h2-color: var(--text-accent);
+  --h3-color: var(--text-accent);
+  --h4-color: var(--text-accent);
+  --h5-color: var(--text-accent);
+}
+
+/* تباين أعلى: قيم من Figma (ghasaq/high-contrast/*) */
+.ghasaq-high-contrast.theme-dark,
+.ghasaq-high-contrast.theme-light {
+  --text-muted: var(--ghasaq-high-contrast-text-muted);
+  --text-faint: var(--ghasaq-high-contrast-text-faint);
+  --background-modifier-border: var(--ghasaq-high-contrast-border);
+  --hr-color: var(--ghasaq-high-contrast-border);
+}
+
+/* الفاصل المزخرف: خطان بينهما فرجة، ومعيّن بلون آخر الضوء بين نقطتين خافتتين.
+   الرسم متناظر حول المركز، فلا يتغيّر بالاتجاه. فاصل الحواشي (داخل .footnotes) يبقى خطًّا عاديًا. */
+.ghasaq-ornament-hr .markdown-rendered .el-hr hr,
+.ghasaq-ornament-hr .markdown-source-view.mod-cm6 .hr hr {
+  position: relative;
+  overflow: visible;
+  height: 1.2em;
+  border: 0;
+  background: linear-gradient(90deg,
+      var(--hr-color) 0 calc(50% - 2.6em),
+      transparent calc(50% - 2.6em) calc(50% + 2.6em),
+      var(--hr-color) calc(50% + 2.6em) 100%) center / 100% var(--hr-thickness) no-repeat;
+}
+
+.ghasaq-ornament-hr .markdown-rendered .el-hr hr::after,
+.ghasaq-ornament-hr .markdown-source-view.mod-cm6 .hr hr::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline: 0;
+  margin-inline: auto;
+  width: 0.42em;
+  height: 0.42em;
+  background-color: var(--ghasaq-ornament);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.ghasaq-ornament-hr .markdown-rendered .el-hr hr::before,
+.ghasaq-ornament-hr .markdown-source-view.mod-cm6 .hr hr::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline: 0;
+  margin-inline: auto;
+  width: 0.2em;
+  height: 0.2em;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 1.1em 0 0 var(--text-faint), -1.1em 0 0 var(--text-faint);
+}

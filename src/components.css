@@ -1,0 +1,36 @@
+/* Canvas والرسم البياني وBases ولوحة الخصائص.
+   ألوانها من الرموز (canvas-color-*، graph-*، tag-*). عارض PDF لا يُمسّ عمدًا. */
+
+body {
+  --canvas-dot-pattern: var(--color-base-30);
+  --bases-cards-radius: var(--radius-m);
+  --bases-table-container-border-radius: var(--radius-m);
+  --metadata-label-font: var(--font-interface);
+  --metadata-input-font: var(--font-interface);
+  --metadata-property-radius: var(--radius-m);
+  --metadata-property-radius-hover: var(--radius-m);
+  --metadata-property-radius-focus: var(--radius-m);
+}
+
+/* بطاقات Canvas: نص البطاقة بخط المتن وارتفاعه */
+.canvas-node-content .markdown-preview-view {
+  line-height: var(--line-height-normal);
+}
+
+/* عنوان مجموعة Canvas قد يكون عربيًا: بلا تباعد */
+.canvas-group-label {
+  letter-spacing: 0;
+  font-family: var(--font-interface);
+}
+
+/* إضافة Style Settings: هوامش سهم طيّ الأقسام فيزيائية (يمين 8px، ويسار -17px للأقسام الفرعية)
+   فتتراكب على العنوان في RTL. نعيدها منطقية: الفرجة نحو النص، والإزاحة في جهة البداية. */
+.mod-rtl .style-settings-collapse-indicator {
+  margin-inline-start: 0;
+  margin-inline-end: 8px;
+}
+
+.mod-rtl .style-settings-heading[data-level="0"] + .style-settings-container .style-settings-collapse-indicator {
+  margin-inline-start: -17px;
+  margin-inline-end: 8px;
+}

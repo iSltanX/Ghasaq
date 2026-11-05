@@ -1,0 +1,96 @@
+/* المحرر ووضع القراءة: الاقتباس، والـ callouts، والتظليل، والجداول، والوسوم، والفاصل، والمهام، والتضمين.
+   الألوان والمقاسات من الرموز؛ هذا الملف يضبط الشكل فقط. */
+
+body {
+  --callout-radius: var(--radius-m);
+  --callout-title-weight: var(--font-bold);
+  --code-radius: var(--radius-m);
+  --embed-border-start: var(--blockquote-border-thickness) solid var(--color-base-35);
+  --checkbox-radius: var(--radius-s);
+  --tag-radius: 2em;
+  --tag-padding-x: 0.6em;
+  --tag-padding-y: 0.2em;
+  --table-header-weight: var(--font-bold);
+  --table-header-font: var(--font-interface);
+  --list-marker-color: var(--text-faint);
+  --inline-title-margin-bottom: 0.4em;
+}
+
+/* حشوة الـ callout الأوسع في جهة البداية: النواة تقلبها في .mod-rtl و.is-rtl و.rtl، فلا نلمسها. */
+
+/* محتوى الـ callout: لا هامش زائد أوله وآخره (التصميم أقصر من الافتراضي) */
+.callout-content > :first-child {
+  margin-block-start: var(--size-4-1);
+}
+
+.callout-content > :last-child {
+  margin-block-end: 0;
+}
+
+/* التظليل ==…==: زاوية خفيفة دون أن يمسّ ارتفاع السطر */
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  border-radius: 2px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* الشيفرة المضمّنة: حشوة أفقية منطقية */
+.markdown-rendered :not(pre) > code {
+  padding-block: 0.1em;
+  padding-inline: 0.35em;
+}
+
+/* كتل الشيفرة */
+.markdown-rendered pre {
+  border-radius: var(--code-radius);
+  padding-block: var(--size-4-3);
+  padding-inline: var(--size-4-4);
+}
+
+/* الاقتباس: نص بلون المتن وحدّ بلون آخر الضوء في جهة البداية (border-inline-start من النواة) */
+.markdown-rendered blockquote {
+  color: var(--text-normal);
+}
+
+/* الجداول: ترويسة بخط الواجهة، وخطوط هادئة */
+.markdown-rendered th,
+.cm-html-embed th {
+  font-family: var(--table-header-font);
+}
+
+.markdown-rendered table {
+  border-radius: var(--radius-s);
+}
+
+/* الوسوم */
+.tag,
+a.tag,
+.cm-s-obsidian .cm-hashtag {
+  font-family: var(--font-interface);
+  letter-spacing: 0;
+}
+
+/* الفاصل العادي: خط رفيع */
+.markdown-rendered hr,
+.markdown-source-view.mod-cm6 .hr hr {
+  border-block-start-width: var(--hr-thickness);
+  border-block-start-color: var(--hr-color);
+}
+
+/* المهام المنجزة: نص خافت مشطوب */
+.markdown-rendered .task-list-item.is-checked,
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"] {
+  color: var(--checklist-done-color);
+}
+
+/* العنوان الداخلي (اسم الملف) */
+.inline-title {
+  font-weight: var(--h1-weight);
+}
+
+/* الحواشي في القراءة: رقم الإحالة بخط الواجهة */
+.markdown-rendered sup.footnote-ref,
+.markdown-rendered .footnote-ref {
+  font-family: var(--font-interface);
+}

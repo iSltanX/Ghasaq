@@ -1,0 +1,105 @@
+/* الواجهة: التبويبات، والأشرطة، والمستكشف، والنوافذ، والتلميحات، والقوائم، وحالات التركيز، والحركة.
+   الألوان من الرموز؛ هنا الشكل وحماية التشكيل من القصّ في العناصر أحادية السطر. */
+
+body {
+  --tab-radius-active: var(--radius-l) var(--radius-l) 0 0;
+  --tab-font-weight: var(--font-normal);
+  --nav-item-radius: var(--radius-s);
+  --nav-item-weight-active: var(--font-semibold);
+  --input-radius: var(--radius-m);
+  --button-radius: var(--radius-m);
+  --modal-radius: var(--radius-l);
+  --prompt-border-color: var(--modal-border-color);
+  --tooltip-radius: var(--radius-m);
+  --tooltip-color: var(--ghasaq-tooltip-text);
+  --background-modifier-message: var(--ghasaq-tooltip-background);
+  --titlebar-text-weight: var(--font-semibold);
+  --vault-profile-font-weight: var(--font-semibold);
+  --icon-opacity: 0.8;
+}
+
+/* ───── حماية التشكيل من القصّ ─────
+   مقاييس Cairo العمودية كبيرة، والعناصر أحادية السطر في النواة تقصّ ما يتجاوز صندوق السطر
+   (overflow: hidden). نمنح السطر ارتفاعًا يتسع للشدّة فوق الحرف والكسرة تحته. */
+.workspace-tab-header-inner-title,
+.nav-file-title-content,
+.nav-folder-title-content,
+.tree-item-inner-text,
+.view-header-title,
+.view-header-breadcrumb,
+.suggestion-title,
+.suggestion-note,
+.tooltip,
+.status-bar-item,
+.vertical-tab-nav-item,
+.setting-item-name,
+.menu-item-title {
+  line-height: var(--ghasaq-ui-line-height);
+}
+
+.workspace-tab-header-inner-title,
+.nav-file-title-content,
+.nav-folder-title-content,
+.tree-item-inner-text {
+  padding-block: 0.12em;
+}
+
+/* العنوان الداخلي: سطر أعلى قليلًا من العناوين لحركات السطر الأول */
+.inline-title {
+  line-height: var(--h1-line-height);
+  padding-block-start: 0.1em;
+}
+
+/* ───── اختصارات المفاتيح ───── */
+kbd,
+.suggestion-hotkey,
+.setting-hotkey {
+  background-color: var(--ghasaq-kbd-background);
+  border-radius: var(--radius-s);
+  font-family: var(--font-interface);
+}
+
+/* ───── حالات التركيز: حلقة بلون التمييز ظاهرة في الوضعين ───── */
+button:focus-visible,
+.clickable-icon:focus-visible,
+.tree-item-self:focus-visible,
+.nav-file-title:focus-visible,
+.nav-folder-title:focus-visible,
+.workspace-tab-header:focus-visible,
+.suggestion-item:focus-visible,
+.vertical-tab-nav-item:focus-visible,
+.checkbox-container:focus-visible,
+.dropdown:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: var(--ghasaq-focus-ring-width) solid var(--ghasaq-focus-ring);
+  outline-offset: 1px;
+  box-shadow: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+  border-color: var(--ghasaq-focus-ring);
+  box-shadow: 0 0 0 1px var(--ghasaq-focus-ring);
+}
+
+/* ───── الحركة: احترام تفضيل تقليلها ───── */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    --anim-duration-superfast: 0ms;
+    --anim-duration-fast: 0ms;
+    --anim-duration-moderate: 0ms;
+    --anim-duration-slow: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}

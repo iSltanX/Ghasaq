@@ -1,0 +1,69 @@
+/* وضع القصيدة العمودية: cssclasses: [qasida]
+   الجدول ذو العمودين يصير أبياتًا: الصدر في جهة البداية والعجز بعده، بعرضين متساويين،
+   بلا حدود ولا ترويسة، وبفراغ واضح بين الشطرين. يعمل في القراءة وفي Live Preview
+   (حيث يُرسم الجدول كـ widget داخل .cm-table-widget). */
+
+.qasida table {
+  --table-border-width: 0;
+  --table-header-background: transparent;
+  --table-header-background-hover: transparent;
+  --table-row-background-hover: transparent;
+  --table-row-alt-background: transparent;
+  --table-row-alt-background-hover: transparent;
+  --table-column-alt-background: transparent;
+  --table-column-max-width: none;
+  --table-white-space: normal;
+  direction: rtl;
+  width: 100%;
+  table-layout: fixed;
+  border: 0;
+  margin-inline: auto;
+  font-size: var(--ghasaq-qasida-size);
+  line-height: var(--ghasaq-qasida-line-height);
+}
+
+/* Markdown يفرض صف ترويسة؛ القصيدة تكتبه فارغًا ونخفيه */
+.qasida table thead {
+  display: none;
+}
+
+.qasida table td {
+  width: 50%;
+  border: 0;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  padding-block: calc(var(--ghasaq-qasida-verse-spacing) / 2);
+  vertical-align: baseline;
+}
+
+/* الصدر: فراغ نصف الفاصل في جهة نهايته */
+.qasida table td:first-child {
+  padding-inline-start: 0;
+  padding-inline-end: calc(var(--ghasaq-qasida-gap) / 2);
+}
+
+/* العجز: فراغ نصف الفاصل في جهة بدايته */
+.qasida table td:last-child {
+  padding-inline-start: calc(var(--ghasaq-qasida-gap) / 2);
+  padding-inline-end: 0;
+}
+
+/* Live Preview: خلية الجدول المحرَّر تحمل غلافًا داخليًا بحشوة خاصة */
+.qasida .cm-table-widget .table-cell-wrapper {
+  padding-block: 0;
+  padding-inline: 0;
+  text-align: center;
+  white-space: normal;
+}
+
+.qasida .cm-table-widget table {
+  margin-block: 0;
+}
+
+/* خيار «ضبط الشطر»: يمتدّ الشطر على عرض عموده */
+.ghasaq-qasida-justify .qasida table td,
+.ghasaq-qasida-justify .qasida .cm-table-widget .table-cell-wrapper {
+  text-align: justify;
+  text-align-last: justify;
+}

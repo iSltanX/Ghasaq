@@ -1,0 +1,17 @@
+filters:
+  and:
+    - file.ext == "md"
+views:
+  - type: table
+    name: كل الملاحظات
+    order:
+      - file.name
+      - tags
+      - date
+      - file.mtime
+  - type: cards
+    name: البطاقات
+    order:
+      - file.name
+      - tags
+      - date

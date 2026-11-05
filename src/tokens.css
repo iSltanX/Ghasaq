@@ -1,0 +1,411 @@
+/* مولَّد من tokens/figma.json بواسطة scripts/build_tokens.py. لا تحرّره يدويًا: عدّل Figma ثم أعد التصدير. */
+/* Figma: w39BycohJtGzAGt0ycPoDT · exported 2026-11-05T03:01:08.203Z */
+
+body {
+  --size-2-1: 2px;
+  --size-2-2: 4px;
+  --size-2-3: 6px;
+  --size-4-1: 4px;
+  --size-4-2: 8px;
+  --size-4-3: 12px;
+  --size-4-4: 16px;
+  --size-4-5: 20px;
+  --size-4-6: 24px;
+  --size-4-8: 32px;
+  --size-4-9: 36px;
+  --size-4-10: 40px;
+  --size-4-12: 48px;
+  --size-4-16: 64px;
+  --size-4-18: 72px;
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+  --radius-xl: 16px;
+  --line-height-normal: 1.9;
+  --line-height-tight: 1.45;
+  --h1-line-height: 1.45;
+  --h2-line-height: 1.5;
+  --h3-line-height: 1.55;
+  --h4-line-height: 1.6;
+  --h5-line-height: 1.6;
+  --h6-line-height: 1.6;
+  --file-line-width: 720px;
+  --border-width: 1px;
+  --hr-thickness: 1px;
+  --blockquote-border-thickness: 2px;
+  --p-spacing: 1rem;
+  --heading-spacing: 2em;
+  --ghasaq-qasida-gap: 3em;
+  --ghasaq-qasida-verse-spacing: 0.5em;
+  --ghasaq-link-underline-offset: 0.3em;
+  --ghasaq-focus-ring-width: 2px;
+  --font-text-theme: var(--ghasaq-text-font, 'Ghasaq Naskh'), 'Iowan Old Style', Charter, Georgia, 'Noto Serif', serif;
+  --font-interface-theme: 'Ghasaq Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, 'Noto Sans', sans-serif;
+  --font-monospace-theme: ui-monospace, 'SF Mono', Menlo, Consolas, 'Cascadia Mono', 'DejaVu Sans Mono', monospace;
+  --font-ui-smaller: 12px;
+  --font-ui-small: 13px;
+  --font-ui-medium: 15px;
+  --font-ui-large: 20px;
+  --h1-size: 1.5em;
+  --h2-size: 1.32em;
+  --h3-size: 1.18em;
+  --h4-size: 1.08em;
+  --h5-size: 1em;
+  --h6-size: 0.92em;
+  --h1-weight: 700;
+  --h2-weight: 700;
+  --h3-weight: 700;
+  --h4-weight: 700;
+  --h5-weight: 700;
+  --h6-weight: 600;
+  --bold-modifier: 200;
+  --code-size: 0.875em;
+  --footnote-size: 0.875em;
+  --tag-size: 0.875em;
+  --ghasaq-qasida-size: 1.08em;
+  --ghasaq-heading-font: 'Ghasaq Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, sans-serif;
+  --ghasaq-ui-line-height: 1.5; /* نمط النص «واجهة/صغير» */
+  --ghasaq-code-line-height: 1.7; /* نمط النص «شيفرة/عادي» */
+  --ghasaq-qasida-line-height: 2; /* نمط النص «قصيدة/شطر» */
+  --ghasaq-footnote-line-height: 1.8; /* نمط النص «حاشية» */
+}
+
+.theme-dark,
+.theme-dark.is-mobile {
+  --accent-h: 30.91;
+  --accent-s: 69.47%;
+  --accent-l: 62.75%;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(calc(var(--accent-h) - 0.11), calc(var(--accent-s) * 1.0631), calc(var(--accent-l) * 1.1156)); /* #EBB47A */
+  --color-accent-2: hsl(calc(var(--accent-h) + 3.27), calc(var(--accent-s) * 1.0627), calc(var(--accent-l) * 1.2594)); /* #F1CFA2 */
+  --color-base-00: #14121C;
+  --color-base-05: #1A1724;
+  --color-base-10: #1E1B29;
+  --color-base-20: #221E2E;
+  --color-base-25: #2A2332;
+  --color-base-30: #2F2A3D;
+  --color-base-35: #3A344B;
+  --color-base-40: #4A4360;
+  --color-base-50: #7D7590;
+  --color-base-60: #958DA6;
+  --color-base-70: #ADA5B8;
+  --color-base-100: #E9E1D3;
+  --color-red: #D9908C;
+  --color-orange: #E5946E;
+  --color-yellow: #DCC173;
+  --color-green: #A3C293;
+  --color-cyan: #86C0BA;
+  --color-blue: #94ACE2;
+  --color-purple: #B9A3EC;
+  --color-pink: #DD9CC4;
+  --background-primary: var(--color-base-05);
+  --background-primary-alt: var(--color-base-20);
+  --background-secondary: var(--color-base-00);
+  --background-secondary-alt: var(--color-base-10);
+  --background-modifier-hover: #E9E1D312;
+  --background-modifier-active-hover: color-mix(in srgb, var(--color-accent) 14.1%, transparent);
+  --background-modifier-border: var(--color-base-30);
+  --background-modifier-border-hover: var(--color-base-35);
+  --background-modifier-border-focus: var(--color-base-40);
+  --background-modifier-error: var(--color-red);
+  --background-modifier-success: var(--color-green);
+  --background-modifier-form-field: var(--color-base-10);
+  --background-modifier-cover: #0F0D1599;
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-70);
+  --text-faint: var(--color-base-50);
+  --text-on-accent: #1A1420;
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-1);
+  --text-error: var(--color-red);
+  --text-warning: var(--color-orange);
+  --text-success: var(--color-green);
+  --text-selection: color-mix(in srgb, var(--color-accent) 27.8%, transparent);
+  --text-highlight-bg: #E2A25E4D;
+  --italic-color: #CFC2E6;
+  --caret-color: var(--color-accent);
+  --interactive-normal: var(--color-base-25);
+  --interactive-hover: var(--color-base-30);
+  --interactive-accent: var(--color-accent);
+  --interactive-accent-hover: var(--color-accent-1);
+  --tag-color: #C89BD0;
+  --tag-color-hover: #DCC4E2;
+  --tag-background: #C89BD024;
+  --tag-background-hover: #C89BD038;
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-external-color: var(--text-accent);
+  --link-unresolved-color: var(--text-accent);
+  --ghasaq-link-underline: color-mix(in srgb, var(--color-accent) 50.2%, transparent);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-muted);
+  --heading-formatting: var(--text-faint);
+  --blockquote-border-color: var(--color-accent);
+  --hr-color: var(--color-base-35);
+  --ghasaq-ornament: var(--color-accent);
+  --checkbox-color: var(--interactive-accent);
+  --checkbox-color-hover: var(--interactive-accent-hover);
+  --checkbox-border-color: var(--text-faint);
+  --checkbox-border-color-hover: var(--text-muted);
+  --checkbox-marker-color: var(--background-primary);
+  --checklist-done-color: var(--text-muted);
+  --list-marker-color: var(--text-faint);
+  --list-marker-color-hover: var(--text-muted);
+  --list-marker-color-collapsed: var(--text-accent);
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--text-normal);
+  --code-comment: #958DA6;
+  --code-function: var(--color-yellow);
+  --code-keyword: #C89BD0;
+  --code-operator: var(--color-red);
+  --code-property: var(--color-cyan);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-green);
+  --code-tag: var(--color-red);
+  --code-value: var(--color-orange);
+  --code-important: var(--color-accent);
+  --callout-default: var(--color-blue);
+  --callout-info: var(--color-blue);
+  --callout-todo: var(--color-blue);
+  --callout-summary: var(--color-cyan);
+  --callout-tip: var(--color-cyan);
+  --callout-important: var(--color-cyan);
+  --callout-success: var(--color-green);
+  --callout-question: var(--color-orange);
+  --callout-warning: var(--color-orange);
+  --callout-fail: var(--color-red);
+  --callout-error: var(--color-red);
+  --callout-bug: var(--color-red);
+  --callout-example: var(--color-purple);
+  --callout-quote: var(--text-muted);
+  --canvas-background: var(--background-primary);
+  --canvas-dot-pattern: var(--color-base-35);
+  --canvas-card-label-color: var(--text-faint);
+  --canvas-color-1: var(--color-red);
+  --canvas-color-2: var(--color-orange);
+  --canvas-color-3: var(--color-yellow);
+  --canvas-color-4: var(--color-green);
+  --canvas-color-5: var(--color-cyan);
+  --canvas-color-6: var(--color-purple);
+  --graph-line: var(--color-base-35);
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--tag-color);
+  --graph-node-attachment: var(--color-yellow);
+  --graph-text: var(--text-normal);
+  --table-border-color: var(--background-modifier-border);
+  --titlebar-background: var(--background-secondary);
+  --tab-container-background: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
+  --ribbon-background: var(--background-secondary);
+  --status-bar-background: var(--background-secondary);
+  --divider-color: var(--background-modifier-border);
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-background-hover: var(--background-modifier-hover);
+  --nav-item-background-selected: var(--background-modifier-active-hover);
+  --modal-background: var(--background-primary);
+  --modal-border-color: var(--background-modifier-border-hover);
+  --ghasaq-focus-ring: var(--color-accent);
+  --ghasaq-high-contrast-text-muted: #C9C2D2;
+  --ghasaq-high-contrast-text-faint: #ADA5B8;
+  --ghasaq-high-contrast-border: #4A4360;
+  --toggle-thumb-color: #FFF8EE;
+  --ghasaq-tooltip-background: #3A344B;
+  --ghasaq-tooltip-text: #E9E1D3;
+  --indentation-guide-color: var(--color-base-35);
+  --ghasaq-kbd-background: var(--color-base-25);
+}
+
+.theme-light,
+.theme-light.is-mobile {
+  --accent-h: 22.3;
+  --accent-s: 65.32%;
+  --accent-l: 33.92%;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(calc(var(--accent-h) + 0.12), calc(var(--accent-s) * 1.0453), calc(var(--accent-l) * 0.8382)); /* #7A3C17 */
+  --color-accent-2: hsl(calc(var(--accent-h) - 0.2), calc(var(--accent-s) * 1.0389), calc(var(--accent-l) * 0.6474)); /* #5E2E12 */
+  --color-base-00: #F7F1E6;
+  --color-base-05: #F3ECDF;
+  --color-base-10: #EEE5D6;
+  --color-base-20: #E6DCCB;
+  --color-base-25: #DFD4C1;
+  --color-base-30: #D6CAB5;
+  --color-base-35: #CCBEA7;
+  --color-base-40: #B5A78F;
+  --color-base-50: #7B7185;
+  --color-base-60: #6B6276;
+  --color-base-70: #5C5366;
+  --color-base-100: #2A2332;
+  --color-red: #9A3B39;
+  --color-orange: #9A4128;
+  --color-yellow: #6E5A10;
+  --color-green: #43663A;
+  --color-cyan: #2C6360;
+  --color-blue: #3B5794;
+  --color-purple: #5F4596;
+  --color-pink: #8A3D6B;
+  --background-primary: var(--color-base-00);
+  --background-primary-alt: var(--color-base-20);
+  --background-secondary: var(--color-base-10);
+  --background-secondary-alt: var(--color-base-05);
+  --background-modifier-hover: #2A23320F;
+  --background-modifier-active-hover: color-mix(in srgb, var(--color-accent) 12.2%, transparent);
+  --background-modifier-border: var(--color-base-30);
+  --background-modifier-border-hover: var(--color-base-35);
+  --background-modifier-border-focus: var(--color-base-40);
+  --background-modifier-error: var(--color-red);
+  --background-modifier-success: var(--color-green);
+  --background-modifier-form-field: #FFF8EE;
+  --background-modifier-cover: #2A233247;
+  --text-normal: var(--color-base-100);
+  --text-muted: var(--color-base-70);
+  --text-faint: var(--color-base-50);
+  --text-on-accent: #FFF8EE;
+  --text-accent: var(--color-accent);
+  --text-accent-hover: var(--color-accent-1);
+  --text-error: var(--color-red);
+  --text-warning: var(--color-orange);
+  --text-success: var(--color-green);
+  --text-selection: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  --text-highlight-bg: #E2A25E61;
+  --italic-color: #4E3A7E;
+  --caret-color: var(--color-accent);
+  --interactive-normal: #FFF8EE;
+  --interactive-hover: var(--color-base-05);
+  --interactive-accent: var(--color-accent);
+  --interactive-accent-hover: var(--color-accent-1);
+  --tag-color: #6A4B8A;
+  --tag-color-hover: #573B74;
+  --tag-background: #6A4B8A1A;
+  --tag-background-hover: #6A4B8A29;
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-external-color: var(--text-accent);
+  --link-unresolved-color: var(--text-accent);
+  --ghasaq-link-underline: color-mix(in srgb, var(--color-accent) 45.1%, transparent);
+  --h1-color: var(--text-normal);
+  --h2-color: var(--text-normal);
+  --h3-color: var(--text-normal);
+  --h4-color: var(--text-normal);
+  --h5-color: var(--text-normal);
+  --h6-color: var(--text-muted);
+  --heading-formatting: var(--text-faint);
+  --blockquote-border-color: var(--color-accent);
+  --hr-color: var(--color-base-35);
+  --ghasaq-ornament: var(--color-accent);
+  --checkbox-color: var(--interactive-accent);
+  --checkbox-color-hover: var(--interactive-accent-hover);
+  --checkbox-border-color: var(--text-faint);
+  --checkbox-border-color-hover: var(--text-muted);
+  --checkbox-marker-color: var(--background-primary);
+  --checklist-done-color: var(--text-muted);
+  --list-marker-color: var(--text-faint);
+  --list-marker-color-hover: var(--text-muted);
+  --list-marker-color-collapsed: var(--text-accent);
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--text-normal);
+  --code-comment: #5C5366;
+  --code-function: var(--color-yellow);
+  --code-keyword: #6A4B8A;
+  --code-operator: var(--color-red);
+  --code-property: var(--color-cyan);
+  --code-punctuation: var(--text-muted);
+  --code-string: var(--color-green);
+  --code-tag: var(--color-red);
+  --code-value: var(--color-orange);
+  --code-important: var(--color-accent);
+  --callout-default: var(--color-blue);
+  --callout-info: var(--color-blue);
+  --callout-todo: var(--color-blue);
+  --callout-summary: var(--color-cyan);
+  --callout-tip: var(--color-cyan);
+  --callout-important: var(--color-cyan);
+  --callout-success: var(--color-green);
+  --callout-question: var(--color-orange);
+  --callout-warning: var(--color-orange);
+  --callout-fail: var(--color-red);
+  --callout-error: var(--color-red);
+  --callout-bug: var(--color-red);
+  --callout-example: var(--color-purple);
+  --callout-quote: var(--text-muted);
+  --canvas-background: var(--background-primary);
+  --canvas-dot-pattern: var(--color-base-35);
+  --canvas-card-label-color: var(--text-faint);
+  --canvas-color-1: var(--color-red);
+  --canvas-color-2: var(--color-orange);
+  --canvas-color-3: var(--color-yellow);
+  --canvas-color-4: var(--color-green);
+  --canvas-color-5: var(--color-cyan);
+  --canvas-color-6: var(--color-purple);
+  --graph-line: var(--color-base-35);
+  --graph-node: var(--text-muted);
+  --graph-node-unresolved: var(--text-faint);
+  --graph-node-focused: var(--text-accent);
+  --graph-node-tag: var(--tag-color);
+  --graph-node-attachment: var(--color-yellow);
+  --graph-text: var(--text-normal);
+  --table-border-color: var(--background-modifier-border);
+  --titlebar-background: var(--background-secondary);
+  --tab-container-background: var(--background-secondary);
+  --tab-background-active: var(--background-primary);
+  --ribbon-background: var(--background-secondary);
+  --status-bar-background: var(--background-secondary);
+  --divider-color: var(--background-modifier-border);
+  --nav-item-color: var(--text-muted);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-background-hover: var(--background-modifier-hover);
+  --nav-item-background-selected: var(--background-modifier-active-hover);
+  --modal-background: var(--background-primary);
+  --modal-border-color: var(--background-modifier-border-hover);
+  --ghasaq-focus-ring: var(--color-accent);
+  --ghasaq-high-contrast-text-muted: #3A344B;
+  --ghasaq-high-contrast-text-faint: #5C5366;
+  --ghasaq-high-contrast-border: #B5A78F;
+  --toggle-thumb-color: #FFF8EE;
+  --ghasaq-tooltip-background: #2A2332;
+  --ghasaq-tooltip-text: #F7F1E6;
+  --indentation-guide-color: var(--color-base-35);
+  --ghasaq-kbd-background: var(--color-base-05);
+}
+
+.theme-dark.ghasaq-accent-copper {
+  --accent-h: 19.16;
+  --accent-s: 69.59%;
+  --accent-l: 66.47%;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(calc(var(--accent-h) + 0.43), calc(var(--accent-s) * 1.0355), calc(var(--accent-l) * 1.1032)); /* #ECAA8A */
+  --color-accent-2: hsl(calc(var(--accent-h) + 0.84), calc(var(--accent-s) * 1.0557), calc(var(--accent-l) * 1.2153)); /* #F2C2AA */
+}
+
+.theme-light.ghasaq-accent-copper {
+  --accent-h: 13.16;
+  --accent-s: 58.76%;
+  --accent-l: 38.04%;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(calc(var(--accent-h) - 0.3), calc(var(--accent-s) * 1.0295), calc(var(--accent-l) * 0.8351)); /* #823520 */
+  --color-accent-2: hsl(calc(var(--accent-h) - 0.69), calc(var(--accent-s) * 1.0483), calc(var(--accent-l) * 0.6443)); /* #652818 */
+}
+
+.theme-dark.ghasaq-accent-dusk {
+  --accent-h: 258.08;
+  --accent-s: 65.77%;
+  --accent-l: 78.24%;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(calc(var(--accent-h) - 0.5), calc(var(--accent-s) * 1.0022), calc(var(--accent-l) * 1.0576)); /* #C7B6F0 */
+  --color-accent-2: hsl(calc(var(--accent-h) + 3.58), calc(var(--accent-s) * 0.6365), calc(var(--accent-l) * 1.0627)); /* #CFC2E6 */
+}
+
+.theme-light.ghasaq-accent-dusk {
+  --accent-h: 259.26;
+  --accent-s: 36.99%;
+  --accent-l: 42.94%;
+  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --color-accent-1: hsl(calc(var(--accent-h) - 1.61), calc(var(--accent-s) * 0.9992), calc(var(--accent-l) * 0.8402)); /* #4E3A7E */
+  --color-accent-2: hsl(calc(var(--accent-h) - 2.12), calc(var(--accent-s) * 1.023), calc(var(--accent-l) * 0.6758)); /* #3E2E66 */
+}

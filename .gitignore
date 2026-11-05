@@ -1,0 +1,14 @@
+# ناتج البناء الوسيط وملف تعريف Obsidian المعزول
+build/
+.cache/
+__pycache__/
+.DS_Store
+# حالة خزينة الاختبار المتغيّرة
+test-vault/.obsidian/workspace*.json
+test-vault/.obsidian/plugins/*/data.json
+test-vault/.obsidian/graph.json
+test-vault/.obsidian/types.json
+# إضافات الطرف الثالث في خزينة الاختبار لا تُرفع (Style Settings يُثبَّت محليًا للاختبار)
+test-vault/.obsidian/plugins/
+# إعدادات Claude المحلية
+.claude/settings.local.json

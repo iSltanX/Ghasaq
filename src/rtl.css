@@ -1,0 +1,48 @@
+/* الاتجاه والنص المختلط.
+   النواة تدعم RTL منذ 1.6 (mod-rtl، dir=auto للكتل، اتجاه كل سطر من أول حرف قوي، قلب الأيقونات والحشوات).
+   هنا ما ينقصها فقط: مناطق LTR المفروضة، وعزل الشيفرة المضمّنة. */
+
+/* ltr-zone: كتل الشيفرة والرياضيات وMermaid تُقرأ من اليسار دائمًا، مهما كان اتجاه الملاحظة */
+.markdown-rendered pre,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
+.markdown-source-view.mod-cm6 .cm-embed-block.cm-callout pre,
+.math-block,
+.markdown-rendered .math.math-block,
+mjx-container[display="true"],
+.markdown-rendered .mermaid,
+.cm-embed-block .mermaid,
+.mermaid-guard-source pre {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* الرياضيات المضمّنة: رموز MathJax لا تحمل حرفًا قويًا يحدّد اتجاهها، فتُفرض LTR معزولة */
+.math-inline,
+mjx-container:not([display="true"]) {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+/* /ltr-zone */
+
+/* الشيفرة المضمّنة داخل سطر عربي: معزولة، واتجاهها من محتواها،
+   فلا تبعثر ترتيب الجملة حولها */
+.markdown-rendered :not(pre) > code,
+.cm-s-obsidian span.cm-inline-code {
+  unicode-bidi: plaintext;
+}
+
+/* اختصارات لوحة المفاتيح مثل ⌘E لا تنقلب داخل نص عربي. plaintext يأخذ الاتجاه من المحتوى
+   دون أن يغيّر خاصية direction، فتبقى الهوامش المنطقية حول المفتاح في جهتها. */
+kbd,
+.setting-hotkey,
+.suggestion-hotkey,
+.prompt-instruction-command {
+  unicode-bidi: plaintext;
+}
+
+/* سهم الـ callout المطويّ: قاعدة قلب الأيقونات في النواة (.mod-rtl svg.svg-icon) أعلى أولوية من تدويره،
+   فيبقى مشيرًا إلى الأسفل. نعيد التدوير نحو جهة نهاية السطر كما في المجلدات المطوية. */
+.mod-rtl .callout-fold.is-collapsed svg.svg-icon {
+  transform: rotate(calc(var(--direction) * -1 * 90deg));
+}

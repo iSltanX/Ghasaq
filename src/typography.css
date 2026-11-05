@@ -1,0 +1,76 @@
+/* الطباعة العربية: خطوط العناوين، وتباعد الحروف، والتوكيد بلا ميل، والروابط، وارتفاع أسطر الواجهة.
+   القيم من src/tokens.css (مولَّد من Figma). */
+
+body {
+  /* العناوين بخط Cairo، والعنوان الداخلي يتبع h1 */
+  --h1-font: var(--ghasaq-heading-font);
+  --h2-font: var(--ghasaq-heading-font);
+  --h3-font: var(--ghasaq-heading-font);
+  --h4-font: var(--ghasaq-heading-font);
+  --h5-font: var(--ghasaq-heading-font);
+  --h6-font: var(--ghasaq-heading-font);
+  --inline-title-font: var(--ghasaq-heading-font);
+
+  /* التباعد يقطع اتصال الحروف العربية: صفر في كل العناوين */
+  --h1-letter-spacing: 0;
+  --h2-letter-spacing: 0;
+  --h3-letter-spacing: 0;
+  --h4-letter-spacing: 0;
+  --h5-letter-spacing: 0;
+  --h6-letter-spacing: 0;
+
+  --link-decoration-thickness: 1px;
+  --footnote-line-height: var(--ghasaq-footnote-line-height);
+  --tooltip-line-height: var(--ghasaq-ui-line-height);
+
+  /* Obsidian يجعل --line-height-normal ارتفاع أسطر body كله؛ المتن يبقى عليه، والواجهة على ارتفاعها */
+  line-height: var(--ghasaq-ui-line-height);
+}
+
+/* العنوان الداخلي يحمل تباعدًا سالبًا ثابتًا في النواة */
+.markdown-source-view .inline-title,
+.markdown-preview-view .inline-title {
+  letter-spacing: 0;
+}
+
+/* شارات الواجهة (جديد، تجريبي...) قد تكون عربية: بلا تباعد ولا أحرف كبيرة */
+.flair {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* العربية لا مائل لها: لا ميل اصطناعي. اللاتيني يأخذ وجهه المائل الحقيقي من خطه، والتمييز باللون */
+em,
+i,
+.cm-em {
+  font-synthesis-style: none;
+}
+
+/* الروابط: خط مزاح عن الحروف النازلة، بلون التمييز بنصف شفافيته */
+.markdown-rendered a,
+.cm-s-obsidian .cm-hmd-internal-link,
+.cm-s-obsidian .cm-link,
+.cm-s-obsidian .cm-url {
+  text-underline-offset: var(--ghasaq-link-underline-offset);
+  text-decoration-color: var(--ghasaq-link-underline);
+  text-decoration-thickness: var(--link-decoration-thickness);
+  text-decoration-skip-ink: auto;
+}
+
+.markdown-rendered a:hover,
+.cm-s-obsidian .cm-hmd-internal-link:hover,
+.cm-s-obsidian .cm-link:hover,
+.cm-s-obsidian .cm-url:hover {
+  text-decoration-color: currentColor;
+}
+
+/* الحواشي */
+.markdown-rendered .footnotes {
+  line-height: var(--ghasaq-footnote-line-height);
+}
+
+/* الشيفرة: ارتفاع أسطرها من نمط «شيفرة/عادي» */
+.markdown-rendered pre,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  line-height: var(--ghasaq-code-line-height);
+}
