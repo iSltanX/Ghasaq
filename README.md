@@ -1,14 +1,31 @@
-<p align="center"><img src="screenshots/readme-header.png" alt="غَسَق: ثيم Obsidian للكتابة والقراءة بالعربية" width="100%"></p>
-
 <div dir="rtl">
+
+<p align="center">
+  <img src="screenshots/readme-header.png" alt="غَسَق: ثيم Obsidian للكتابة والقراءة بالعربية" width="100%">
+</p>
 
 <h1 align="center">غَسَق · Ghasaq</h1>
 
-<p align="center">ثيم Obsidian صُمّم للكتابة والقراءة بالعربية من أوّله: حبرٌ ليلي، وورقٌ دافئ، وآخرُ الضوء.</p>
+<p align="center">ثيم Obsidian للكتابة والقراءة بالعربية: حبرٌ ليلي، وورقٌ دافئ، وآخرُ الضوء.</p>
 
-<p align="center" dir="ltr"><b>An Arabic-first Obsidian theme</b> for long-form writing and reading: violet night ink, warm paper and an amber last light. Dark «Ghasaq» and light «Asil» modes, embedded Noto Naskh Arabic and Cairo, careful right-to-left layout and a qasida mode for classical verse. <a href="#english">English documentation ↓</a></p>
+<p align="center" dir="ltr"><b>An Arabic-first Obsidian theme for long-form writing and reading:</b> violet night ink, warm paper and an amber last light. Careful right-to-left layout, embedded Noto Naskh Arabic and Cairo, a qasida mode for classical verse, dark and light modes, and 9 Style Settings options. <a href="README.en.md">Full English documentation →</a></p>
 
-## الفكرة
+<p align="center">
+  <a href="https://github.com/iSltanX/Ghasaq/releases/latest"><img src="https://img.shields.io/github/v/release/iSltanX/Ghasaq?label=release&color=AB632B" alt="الإصدار"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-5F459A" alt="الرخصة"></a>
+  <img src="https://img.shields.io/badge/Obsidian-1.14.4%2B-1E1B29" alt="Obsidian 1.14.4+">
+</p>
+
+<p align="center">
+  <a href="#المعاينة">المعاينة</a> ·
+  <a href="#التثبيت">التثبيت</a> ·
+  <a href="#الإعدادات">الإعدادات</a> ·
+  <a href="#القصيدة-العمودية">القصيدة العمودية</a> ·
+  <a href="#التطوير">التطوير</a> ·
+  <a href="README.en.md">English</a>
+</p>
+
+## عن غسق
 
 الغَسَق ظلمة أول الليل، حين يغيب الشفق ويبقى أثر ضوئه. يقوم الثيم على ثلاثة عناصر:
 
@@ -34,7 +51,7 @@
 
 بقية اللقطات في [`screenshots/`](screenshots/). وفيها مصفوفة كاملة: الوضعان، والواجهتان العربية والإنجليزية، والتحرير والقراءة، وCanvas، والرسم البياني، وBases، والإعدادات.
 
-## ما يقدّمه
+## المزايا
 
 **الطباعة العربية**
 - المتن بخط **Noto Naskh Arabic** مضمَّنًا، بوزنين حقيقيين 400 و700، وارتفاع سطر 1.9 حتى لا يتصادم التشكيل.
@@ -60,16 +77,19 @@
 
 ## التثبيت
 
-**من متجر Obsidian:** الإعدادات ← المظهر ← السمات ← إدارة، ثم ابحث عن **Ghasaq** (بعد قبوله في المتجر).
+### من متجر الثيمات
 
-**يدويًا:**
-1. نزّل `manifest.json` و`theme.css` من [آخر إصدار](https://github.com/iSltanX/ghasaq/releases/latest).
+الإعدادات ← المظهر ← السمات ← إدارة، ثم ابحث عن **Ghasaq** واضغط «استخدام» (بعد قبوله في المتجر).
+
+### يدويًا
+
+1. نزّل `manifest.json` و`theme.css` من [آخر إصدار](https://github.com/iSltanX/Ghasaq/releases/latest).
 2. ضعهما في `.obsidian/themes/Ghasaq/` داخل خزينتك.
 3. اختر Ghasaq من الإعدادات ← المظهر.
 
 يحتاج Obsidian **1.14.4** فأحدث. اختُبر على 1.14.4 و1.15.0 على macOS.
 
-## خيارات Style Settings
+## الإعدادات
 
 الثيم يعمل كاملًا بدون إضافة [Style Settings](https://github.com/obsidian-community/obsidian-style-settings). إن ثبّتّها ظهرت الخيارات التالية بعناوين عربية:
 
@@ -85,7 +105,7 @@
 | فاصل `---` مزخرف | معيّن صغير بلون آخر الضوء بين خطين |
 | ضبط الشطر في القصيدة | يمدّ كل شطر على عرض عموده بدل توسيطه |
 
-## وضع القصيدة العمودية
+## القصيدة العمودية
 
 أضف الصنف `qasida` إلى خصائص الملاحظة، واكتب الأبيات جدولًا من عمودين: الصدر في العمود الأول، والعجز في الثاني. اترك صف الترويسة فارغًا، فهو صف يفرضه Markdown والثيم يخفيه.
 
@@ -106,7 +126,9 @@ cssclasses:
 - بلا حدود ولا ترويسة.
 - يعمل في وضع القراءة وفي Live Preview، ويتحمّل التشكيل التام، ويبقى RTL حتى تحت واجهة إنجليزية.
 
-## الخطوط ورخصها
+الملاحظة تبقى Markdown عاديًا. إن غيّرت الثيم يومًا ظهرت الأبيات جدولًا مقروءًا.
+
+## الخطوط
 
 | الخط | الاستعمال | الرخصة |
 |---|---|---|
@@ -115,11 +137,16 @@ cssclasses:
 
 الخطّان مضمَّنان في `theme.css` بصيغة woff2 مجزّأة، فلا طلبات شبكة. الكلمات اللاتينية في المتن تأخذ خط النظام (Iowan Old Style ← Charter ← Georgia)، والشيفرة خط mono النظام.
 
-## حدود معروفة
+## قيود معروفة
 
 - **حقل التاريخ في الخصائص:** يعرض حروف «يوم/شهر/سنة» معكوسة تحت الواجهة العربية. هذا عيب في Obsidian/Chromium يظهر في الثيم الافتراضي أيضًا.
 - **الصورة المنفردة في سطرها:** تأخذ اتجاه LTR، لأن السطر بلا حرف قوي فيأخذ `dir=auto` اتجاه LTR، وهذا سلوك Obsidian.
 - **الجوال وWindows وLinux:** لم تُختبر على أجهزة حقيقية بعد.
+
+## المشكلات والاقتراحات
+
+- **وجدت خللًا؟** افتح [بلاغًا](https://github.com/iSltanX/Ghasaq/issues/new) وأرفق لقطة شاشة، واذكر نسخة Obsidian والجهاز ولغة الواجهة.
+- **عندك فكرة؟** افتح [اقتراحًا](https://github.com/iSltanX/Ghasaq/issues/new) وصِف ما تريد.
 
 ## التطوير
 
@@ -135,55 +162,23 @@ cssclasses:
   - `scripts/obsidian-test.sh`: يشغّل نسخة Obsidian معزولة على `test-vault/`. إضافة Style Settings لا تُرفع مع المستودع؛ ثبّتها في الخزينة من المتجر، أو انسخها إلى `test-vault/.obsidian/plugins/obsidian-style-settings/`.
   - `scripts/cli-check.sh`: يتحقق عبر Obsidian CLI.
   - `scripts/shoot-matrix.sh`: يلتقط مصفوفة اللقطات.
+- **الإصدار:** ارفع `version` في `manifest.json`، وأضف سطرًا إلى [CHANGELOG.md](CHANGELOG.md)، ثم ادفع وسمًا بالرقم نفسه، فينشئ GitHub Actions مسودّة الإصدار.
+
+## شكر
+
+- [Noto Naskh Arabic](https://github.com/notofonts/arabic) من مؤلفي مشروع Noto.
+- [Cairo](https://github.com/Gue3bara/Cairo) من مؤلفي مشروع Cairo.
+- إضافة [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) التي جعلت الإعدادات ممكنة.
+- فريق [Obsidian](https://obsidian.md) على دعم الواجهة من اليمين إلى اليسار.
 
 ## الرخصة
 
-الثيم برخصة [MIT](LICENSE). الخطوط المضمَّنة برخصة SIL Open Font License 1.1.
-
-</div>
+كود الثيم برخصة [MIT](LICENSE). الخطوط المضمَّنة برخصة SIL Open Font License 1.1، ونصّها في [`fonts/`](fonts/).
 
 ---
 
-<a id="english"></a>
+<p align="center"><sub>
+  تصميم وتطوير: سلطان العنزي — Sultan Al-Anazi · <a href="https://bysltan.com">bysltan.com</a>
+</sub></p>
 
-## English
-
-**Ghasaq** (غَسَق, *the first darkness of night*) is an Obsidian theme designed for writing and reading Arabic from the ground up, not an English theme translated later. It is built on three elements:
-
-- **Ink:** violet-leaning night surfaces.
-- **Paper:** warm text, never stark white.
-- **The last light:** an amber accent used sparingly.
-
-The dark mode is called **Ghasaq** and the light mode **Asil** (*late afternoon*). The whole identity was designed in Figma first; the theme's colours, sizes and type are generated from Figma variables.
-
-### Highlights
-
-- **Embedded Arabic type:** Noto Naskh Arabic for body text (real 400/700 weights, 1.9 line height so diacritics never collide) and Cairo for headings and UI, both bundled as subset woff2.
-- **Latin stays Latin:** the Arabic face is limited by `unicode-range`, so Latin words fall back to a system serif with a true italic. The visual size of the two scripts is balanced with `size-adjust`, without touching your chosen font size.
-- **No harm to Arabic:** zero letter-spacing, no synthetic italic for Arabic (emphasis uses colour), and no clipped diacritics in tabs, file explorer, outline or headings.
-- **Works with Obsidian's native RTL support:** code blocks, math and Mermaid are always LTR, inline code is isolated, hotkeys don't flip, and the collapsed-callout arrow points the right way. Blockquote borders, callouts, lists, tasks, tables, footnotes, fold arrows, line numbers, properties and embeds sit on the correct side in both directions.
-- **Contrast is checked on every build** (WCAG): body text ≥ 11:1, secondary/accent/tags ≥ 4.5:1.
-- **Your accent wins:** an accent chosen in Obsidian's settings always takes precedence over the theme's amber.
-- **Qasida mode:** `cssclasses: [qasida]` turns two-column tables into classical Arabic verse (equal hemistichs, no borders, hidden header) in Reading view and Live Preview.
-
-### Installation
-
-From the community theme browser, search for **Ghasaq** (once accepted). To install manually, download `manifest.json` and `theme.css` from the latest release into `.obsidian/themes/Ghasaq/`. Requires Obsidian 1.14.4 or newer; tested on 1.14.4 and 1.15.0 (macOS).
-
-### Style Settings
-
-The theme is complete without the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) plugin. With it installed you get:
-
-- Body font
-- Line height
-- Reading width
-- Text alignment
-- Accent (amber, copper or dusk violet)
-- Heading colour
-- Higher contrast
-- An ornamental `---` divider
-- Justified hemistichs for qasida notes
-
-### Fonts and licence
-
-The theme is MIT licensed. The embedded fonts are Noto Naskh Arabic and Cairo, both under the SIL Open Font License 1.1; see `fonts/`.
+</div>
