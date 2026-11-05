@@ -6,7 +6,7 @@
 
 <p align="center">ثيم Obsidian صُمّم للكتابة والقراءة بالعربية من أوّله: حبرٌ ليلي، وورقٌ دافئ، وآخرُ الضوء.</p>
 
-<p align="center"><a href="#english">English ↓</a></p>
+<p align="center" dir="ltr"><b>An Arabic-first Obsidian theme</b> for long-form writing and reading: violet night ink, warm paper and an amber last light. Dark «Ghasaq» and light «Asil» modes, embedded Noto Naskh Arabic and Cairo, careful right-to-left layout and a qasida mode for classical verse. <a href="#english">English documentation ↓</a></p>
 
 ## الفكرة
 
