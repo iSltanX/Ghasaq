@@ -162,7 +162,7 @@ Both fonts are embedded in `theme.css` as subset woff2, so the theme makes no ne
 
 ## Credits & license
 
-Fonts: [Noto Naskh Arabic](https://github.com/notofonts/arabic) by the Noto Project Authors and [Cairo](https://github.com/Gue3bara/Cairo) by the Cairo Project Authors, both SIL OFL 1.1 ([`fonts/`](fonts/)). Thanks to the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) plugin and to the [Obsidian](https://obsidian.md) team for right-to-left support. Theme code: [MIT](LICENSE).
+Fonts: [Noto Naskh Arabic](https://github.com/notofonts/arabic) by the Noto Project Authors and [Cairo](https://github.com/Gue3bara/Cairo) by the Cairo Project Authors, both SIL OFL 1.1 ([`fonts/NOTICE.md`](fonts/NOTICE.md)). Thanks to the [Style Settings](https://github.com/obsidian-community/obsidian-style-settings) plugin and to the [Obsidian](https://obsidian.md) team for right-to-left support. Theme code: [MIT](LICENSE).
 
 ---
 

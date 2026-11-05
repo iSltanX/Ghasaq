@@ -173,7 +173,7 @@ cssclasses:
 
 ## الرخصة
 
-كود الثيم برخصة [MIT](LICENSE). الخطوط المضمَّنة برخصة SIL Open Font License 1.1، ونصّها في [`fonts/`](fonts/).
+كود الثيم برخصة [MIT](LICENSE). الخطوط المضمَّنة برخصة SIL Open Font License 1.1، وحقوقها ونصّ رخصتها في [`fonts/NOTICE.md`](fonts/NOTICE.md).
 
 ---
 
