@@ -13,6 +13,7 @@
 </p>
 
 <p align="center">
+  <a href="https://community.obsidian.md/themes/ghasaq">Theme directory</a> ·
   <a href="#previews">Previews</a> ·
   <a href="#installation">Installation</a> ·
   <a href="#style-settings">Style Settings</a> ·
@@ -75,7 +76,11 @@ More in [`screenshots/`](screenshots/), including a full matrix: both modes, the
 
 ### From the theme browser
 
-Settings → Appearance → Themes → Manage, search for **Ghasaq** and click *Use* (once accepted into the community directory).
+Ghasaq is listed in the [Obsidian theme directory](https://community.obsidian.md/themes/ghasaq). Click “Add to Obsidian” there, or from inside the app:
+
+1. Open **Settings → Appearance → Themes → Manage**.
+2. Search for **Ghasaq**.
+3. Click **Install and use**.
 
 ### Manually
 
